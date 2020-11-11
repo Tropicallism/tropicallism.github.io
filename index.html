@@ -1,6 +1,7 @@
 <html>
     <head>
         <b>Hello! Please allow access to the clipboard, and we'll copy the timezone for you!</b>
+        <h1 id = "TZ">Loading...</h1>
     </head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script>
@@ -8,11 +9,8 @@
         navigator.clipboard.writeText(TZ).then(() => {
             navigator.clipboard.readText().then(text => {
                 alert("Your time zone is, " + text)
-                document.getElementById("TZ").innerHTML = "Hi"
+                document.getElementById("TZ").innerHTML = TZ
             })
         })
     </script>
-    <head>
-        <p id = "TZ"></p>>
-    </head>
 </html>
