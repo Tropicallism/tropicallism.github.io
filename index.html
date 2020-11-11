@@ -8,7 +8,7 @@
         navigator.clipboard.writeText(TZ).then(() => {
             navigator.clipboard.readText().then(text => {
                 alert("Your time zone is, " + text)
-                document.getElementById("TZ").var = "Hi"
+                document.getElementById("TZ").innerHTML = "Hi"
             })
         })
     </script>
